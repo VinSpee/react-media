@@ -40,7 +40,7 @@ Render a `<Media>` component with a `query` prop whose value is a valid [CSS med
 
 with `query`:
 
-```js
+```jsx
 import React from 'react'
 import Media from 'react-media'
 
@@ -102,7 +102,7 @@ If you use a regular React element as `children` (i.e. `<Media><SomethingHere/><
 
 For the common case of "only render something when the media query matches", you can use a `render` prop that is only called if the query matches.
 
-```js
+```jsx
 import React from 'react'
 import Media from 'react-media'
 
@@ -123,7 +123,7 @@ The `render` prop is never called if the query does not match.
 
 `<Media query>` and `<Media queries>` also accepts an object, similar to [React's built-in support for inline style objects](https://facebook.github.io/react/tips/inline-styles.html) in e.g. `<div style>`. These objects are converted to CSS media queries via [json2mq](https://github.com/akiran/json2mq/blob/master/README.md#usage).
 
-```js
+```jsx
 import React from 'react'
 import Media from 'react-media'
 
@@ -146,4 +146,6 @@ class App extends React.Component {
 
 Keys of media query objects are camel-cased and numeric values automatically get the `px` suffix. See the [json2mq docs](https://github.com/akiran/json2mq/blob/master/README.md#usage) for more examples of queries you can construct using objects.
 
-That's it :) Enjoy!
+## About
+
+Development of react-media is done by [React Training](https://reacttraining.com). If you're interested in learning more about what React can do for your company, please [get in touch](mailto:hello@reacttraining.com)!
