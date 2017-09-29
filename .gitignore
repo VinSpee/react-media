@@ -1,5 +1,2 @@
-es
-node_modules
-umd
-/*.js
 !webpack.config.js
+node_modules
