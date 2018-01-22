@@ -46,7 +46,7 @@ class Media extends React.Component {
         matches: this.queries.reduce((accumulated, { name, mediaQueryList }) => ({
           ...accumulated,
           [name]: mediaQueryList.matches,
-        }), {}),
+        }), false)
       })
   }
 

@@ -26,13 +26,13 @@ describe('A <Media>', () => {
 
   describe('with a query that matches', () => {
     beforeEach(() => {
-      window.matchMedia = createMockMediaMatcher(true)
+      window.matchMedia = createMockMediaMatcher({ sm: true })
     })
 
     describe('and a children element', () => {
       it('renders its child', () => {
         const element = (
-          <Media query="">
+          <Media queries={{}}>
             <div>hello</div>
           </Media>
         )
@@ -46,7 +46,7 @@ describe('A <Media>', () => {
     describe('and a children function', () => {
       it('renders its child', () => {
         const element = (
-          <Media query="">
+          <Media queries={{}}>
             {matches => (
               matches ? <div>hello</div> : <div>goodbye</div>
             )}
@@ -62,7 +62,7 @@ describe('A <Media>', () => {
     describe('and a render function', () => {
       it('renders its child', () => {
         const element = (
-          <Media query="" render={() => (
+          <Media queries={{}} render={() => (
             <div>hello</div>
           )}/>
         )
@@ -82,7 +82,7 @@ describe('A <Media>', () => {
     describe('and a children element', () => {
       it('renders its child', () => {
         const element = (
-          <Media query="">
+          <Media queries={{}}>
             <div>hello</div>
           </Media>
         )
@@ -96,7 +96,7 @@ describe('A <Media>', () => {
     describe('and a children function', () => {
       it('renders its child', () => {
         const element = (
-          <Media query="">
+          <Media queries={{}}>
             {matches => (
               matches ? <div>hello</div> : <div>goodbye</div>
             )}
@@ -113,7 +113,7 @@ describe('A <Media>', () => {
       it('does not render', () => {
         let renderWasCalled = false
         const element = (
-          <Media query="" render={() => {
+          <Media queries={{}} render={() => {
             renderWasCalled = true
             return <div>hello</div>
           }}/>
@@ -134,7 +134,7 @@ describe('A <Media>', () => {
 
     it('renders its child', () => {
       const markup = ReactDOMServer.renderToStaticMarkup(
-        <Media query="">
+        <Media queries={{}}>
           <div>hello</div>
         </Media>
       )
