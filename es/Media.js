@@ -8,8 +8,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 import json2mq from 'json2mq';
 
 var queryType = PropTypes.oneOfType([PropTypes.string, PropTypes.object, PropTypes.arrayOf(PropTypes.object.isRequired)]);
@@ -54,7 +54,7 @@ var Media = function (_React$Component) {
           var name = _ref2.name,
               mediaQueryList = _ref2.mediaQueryList;
           return _extends({}, accumulated, (_extends3 = {}, _extends3[name] = mediaQueryList.matches, _extends3));
-        }, {})
+        }, false)
       });
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
